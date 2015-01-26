@@ -17,10 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WRk-aA-k99">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bill amount" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WRk-aA-k99">
                                 <rect key="frame" x="16" y="28" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="2" maxValue="8" translatesAutoresizingMaskIntoConstraints="NO" id="bvO-Lh-MGa">
                                 <rect key="frame" x="14" y="66" width="572" height="31"/>
@@ -34,7 +34,7 @@
                                     <action selector="calculatePressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="biv-ml-Q1T"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKd-Y4-RAa">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pay amount" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKd-Y4-RAa">
                                 <rect key="frame" x="16" y="142" width="568" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="qZ9-Vc-GNd"/>
@@ -66,8 +66,8 @@
                     </view>
                     <connections>
                         <outlet property="billAmountTextField" destination="WRk-aA-k99" id="mfe-dq-ICf"/>
-                        <outlet property="payAmountLabel" destination="mKd-Y4-RAa" id="uWx-Hb-qGX"/>
                         <outlet property="splitCountSlider" destination="bvO-Lh-MGa" id="Hr2-Ys-eCP"/>
+                        <outlet property="splitPayAmountLabel" destination="mKd-Y4-RAa" id="z1B-Nm-0cI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

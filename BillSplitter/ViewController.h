@@ -12,7 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *billAmountTextField;
 @property (weak, nonatomic) IBOutlet UISlider *splitCountSlider;
-@property (weak, nonatomic) IBOutlet UILabel *payAmountLabel;
+@property (weak, nonatomic) IBOutlet UILabel *splitPayAmountLabel;
 
 @end
 
