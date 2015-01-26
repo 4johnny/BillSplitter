@@ -81,13 +81,9 @@
 		B2BF01CF1A76BFBB000498FC /* BillSplitter */ = {
 			isa = PBXGroup;
 			children = (
-				B2BF01D41A76BFBB000498FC /* AppDelegate.h */,
-				B2BF01D51A76BFBB000498FC /* AppDelegate.m */,
 				B2BF01D71A76BFBB000498FC /* ViewController.h */,
 				B2BF01D81A76BFBB000498FC /* ViewController.m */,
 				B2BF01DA1A76BFBB000498FC /* Main.storyboard */,
-				B2BF01DD1A76BFBB000498FC /* Images.xcassets */,
-				B2BF01DF1A76BFBB000498FC /* LaunchScreen.xib */,
 				B2BF01D01A76BFBB000498FC /* Supporting Files */,
 			);
 			path = BillSplitter;
@@ -96,6 +92,10 @@
 		B2BF01D01A76BFBB000498FC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B2BF01DD1A76BFBB000498FC /* Images.xcassets */,
+				B2BF01DF1A76BFBB000498FC /* LaunchScreen.xib */,
+				B2BF01D41A76BFBB000498FC /* AppDelegate.h */,
+				B2BF01D51A76BFBB000498FC /* AppDelegate.m */,
 				B2BF01D11A76BFBB000498FC /* Info.plist */,
 				B2BF01D21A76BFBB000498FC /* main.m */,
 			);

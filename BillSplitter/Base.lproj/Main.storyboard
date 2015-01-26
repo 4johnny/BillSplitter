@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,7 +16,50 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WRk-aA-k99">
+                                <rect key="frame" x="16" y="28" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bvO-Lh-MGa">
+                                <rect key="frame" x="14" y="66" width="572" height="31"/>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDf-kY-VkL">
+                                <rect key="frame" x="277" y="104" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKd-Y4-RAa">
+                                <rect key="frame" x="16" y="142" width="568" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="qZ9-Vc-GNd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bvO-Lh-MGa" firstAttribute="top" secondItem="WRk-aA-k99" secondAttribute="bottom" constant="8" id="63E-Hb-hyN"/>
+                            <constraint firstAttribute="centerX" secondItem="bvO-Lh-MGa" secondAttribute="centerX" id="7xG-Bc-RFQ"/>
+                            <constraint firstItem="bvO-Lh-MGa" firstAttribute="top" secondItem="WRk-aA-k99" secondAttribute="bottom" constant="8" id="DGI-xm-TBl"/>
+                            <constraint firstItem="VDf-kY-VkL" firstAttribute="top" secondItem="bvO-Lh-MGa" secondAttribute="bottom" constant="8" id="DHX-AV-oQK"/>
+                            <constraint firstItem="mKd-Y4-RAa" firstAttribute="width" secondItem="WRk-aA-k99" secondAttribute="width" id="G16-K3-Ebn"/>
+                            <constraint firstItem="bvO-Lh-MGa" firstAttribute="top" secondItem="WRk-aA-k99" secondAttribute="bottom" constant="8" symbolic="YES" id="Lci-9e-00S"/>
+                            <constraint firstAttribute="centerX" secondItem="VDf-kY-VkL" secondAttribute="centerX" id="Mfh-Yf-kxE"/>
+                            <constraint firstAttribute="centerX" secondItem="WRk-aA-k99" secondAttribute="centerX" id="VBn-In-BNf"/>
+                            <constraint firstItem="WRk-aA-k99" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Zp0-vw-LXU"/>
+                            <constraint firstItem="mKd-Y4-RAa" firstAttribute="top" secondItem="VDf-kY-VkL" secondAttribute="bottom" constant="8" id="ayT-WR-ZyK"/>
+                            <constraint firstItem="mKd-Y4-RAa" firstAttribute="top" secondItem="VDf-kY-VkL" secondAttribute="bottom" constant="8" id="ghe-Fz-IDu"/>
+                            <constraint firstItem="mKd-Y4-RAa" firstAttribute="top" secondItem="VDf-kY-VkL" secondAttribute="bottom" constant="8" symbolic="YES" id="iJh-GL-KoB"/>
+                            <constraint firstItem="WRk-aA-k99" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="lqm-ti-rCm"/>
+                            <constraint firstAttribute="centerX" secondItem="mKd-Y4-RAa" secondAttribute="centerX" id="rJy-T6-31R"/>
+                            <constraint firstItem="mKd-Y4-RAa" firstAttribute="width" secondItem="bvO-Lh-MGa" secondAttribute="width" id="v3Y-td-Vs8"/>
+                            <constraint firstItem="WRk-aA-k99" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="wTD-aH-Zc9"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
