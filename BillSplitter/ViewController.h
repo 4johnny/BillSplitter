@@ -10,6 +10,9 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *billAmountTextField;
+@property (weak, nonatomic) IBOutlet UISlider *splitCountSlider;
+@property (weak, nonatomic) IBOutlet UILabel *payAmountLabel;
 
 @end
 
