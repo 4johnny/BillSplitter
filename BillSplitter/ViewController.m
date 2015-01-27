@@ -9,22 +9,108 @@
 #import "ViewController.h"
 
 
+#
+# pragma mark - Constants
+#
+
+#define SLIDER_INCREMENT	1
+
+
+#
+# pragma mark - Macros
+#
+
 #define DEC_DIV(dec1, dec2) [dec1 decimalNumberByDividingBy:dec2]
+
+
+#
+# pragma mark - Interface
+#
 
 
 @interface ViewController ()
 
 @end
 
+
+#
+# pragma mark - Implementation
+#
+
+
 @implementation ViewController
 
+
+#
+# pragma mark - UIViewController
+#
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 	
+	self.billAmountTextField.delegate = self;
 	self.splitPayAmountLabel.text = @"";
 }
+
+
+#
+# pragma mark - UIResponder
+#
+
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+	
+	[self.view endEditing:YES];
+	[super touchesBegan:touches withEvent:event];
+}
+
+
+#
+# pragma mark - UITextFieldDelegate
+#
+
+
+-(void)textFieldDidEndEditing:(UITextField *)textField {
+	
+	[self calculateSplitAmount];
+}
+
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+	
+	[self.view endEditing:YES];
+	return YES;
+}
+
+
+#
+# pragma mark - Action Handlers
+#
+
+
+- (IBAction)calculatePressed {
+	
+	[self.view endEditing:YES];
+	[self calculateSplitAmount];
+}
+
+
+- (IBAction)splitCountChanged {
+	
+	[self.view endEditing:YES];
+	
+	int splitCount = ((int)((self.splitCountSlider.value + SLIDER_INCREMENT / 2.0) / SLIDER_INCREMENT) * SLIDER_INCREMENT);
+	
+	[self.splitCountSlider setValue:splitCount animated:YES];
+	
+	[self calculateSplitAmount];
+}
+
+
+#
+# pragma mark - Logic
+#
 
 
 - (void)calculateSplitAmount {
@@ -45,10 +131,5 @@
 	self.splitPayAmountLabel.text = [nf stringFromNumber:splitPayAmount];
 }
 
-
-- (IBAction)calculatePressed {
-	
-	[self calculateSplitAmount];
-}
 
 @end

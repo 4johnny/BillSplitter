@@ -8,7 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+#
+# pragma mark - Interface
+#
+
+@interface ViewController : UIViewController <UITextFieldDelegate>
+
+# pragma mark Properties
 
 @property (weak, nonatomic) IBOutlet UITextField *billAmountTextField;
 @property (weak, nonatomic) IBOutlet UISlider *splitCountSlider;
